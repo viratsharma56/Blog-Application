@@ -1,6 +1,7 @@
 import { Table, TableCell, TableRow, TableHead, TableBody, Button } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React from 'react'
+import { Link } from "react-router-dom";
 
 const mystyle = makeStyles({
     table: {
@@ -12,7 +13,7 @@ const Categories = () => {
     const style = mystyle();
     return (
         <>
-        <Button variant="contained" className={style.create} style={{margin: 20, background: '#6495ED', color: '#fff', width: '86%'}}>Create Blog</Button>
+        <Link to="/createpost" style={{textDecoration: 'none', color: 'inherit'}}><Button variant="contained" className={style.create} style={{margin: 20, background: '#6495ED', color: '#fff', width: '86%'}}>Create Blog</Button></Link>
         <Table className={style.table}>
             <TableHead>
                 <TableRow>

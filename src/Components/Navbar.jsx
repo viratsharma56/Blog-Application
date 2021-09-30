@@ -1,6 +1,7 @@
 import { AppBar, Toolbar, Typography } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import React from 'react'
+import { Link } from "react-router-dom";
 
 const myStyle = makeStyles({
     container: {
@@ -21,10 +22,10 @@ const Home = () => {
         <div>
             <AppBar>
                 <Toolbar className={classes.container}>
-                    <Typography>HOME</Typography>
-                    <Typography>ABOUT</Typography>
-                    <Typography>CONTACT</Typography>
-                    <Typography>LOGIN</Typography>
+                    <Link to="/" style={{textDecoration: "none", color: 'inherit'}}><Typography>HOME</Typography></Link>
+                    <Link to="/about" style={{textDecoration: "none", color: 'inherit'}}><Typography>ABOUT</Typography></Link>
+                    <Link to="/contact" style={{textDecoration: "none", color: 'inherit'}}><Typography>CONTACT</Typography></Link>
+                    <Link to="/login" style={{textDecoration: "none", color: 'inherit'}}><Typography>LOGIN</Typography></Link>
                 </Toolbar>
             </AppBar>
         </div>
